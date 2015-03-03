@@ -21,9 +21,13 @@ class SimpleTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testMock () {
+        let word = "word"
+        
+        let mock = Mock(word)
+        let res  = mock.say(2)
+        
+        XCTAssert(res == "word:word", "What?")
     }
     
     func testPerformanceExample() {
