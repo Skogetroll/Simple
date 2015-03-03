@@ -14,6 +14,12 @@
 		9ED9A5A01AA49DCB00D59068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9A59F1AA49DCB00D59068 /* Images.xcassets */; };
 		9ED9A5A31AA49DCB00D59068 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9A5A11AA49DCB00D59068 /* LaunchScreen.xib */; };
 		9ED9A5AF1AA49DCB00D59068 /* SimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9A5AE1AA49DCB00D59068 /* SimpleTests.swift */; };
+		9ED9A5B91AA49F1A00D59068 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9A5B81AA49F1A00D59068 /* Mock.swift */; };
+		9ED9A5BA1AA49F9400D59068 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9A5B81AA49F1A00D59068 /* Mock.swift */; };
+		9EE4748E1AA5A11B00075219 /* Cent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE4748C1AA5A11B00075219 /* Cent.framework */; };
+		9EE4748F1AA5A11B00075219 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE4748D1AA5A11B00075219 /* Dollar.framework */; };
+		9EE474911AA5A1CE00075219 /* Cent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE4748C1AA5A11B00075219 /* Cent.framework */; };
+		9EE474921AA5A1D100075219 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE4748D1AA5A11B00075219 /* Dollar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +31,19 @@
 			remoteInfo = Simple;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9EE4748B1AA59C6F00075219 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9ED9A5901AA49DCB00D59068 /* Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +57,9 @@
 		9ED9A5A81AA49DCB00D59068 /* SimpleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED9A5AD1AA49DCB00D59068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ED9A5AE1AA49DCB00D59068 /* SimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTests.swift; sourceTree = "<group>"; };
+		9ED9A5B81AA49F1A00D59068 /* Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		9EE4748C1AA5A11B00075219 /* Cent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cent.framework; path = Carthage/Build/iOS/Cent.framework; sourceTree = "<group>"; };
+		9EE4748D1AA5A11B00075219 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE4748E1AA5A11B00075219 /* Cent.framework in Frameworks */,
+				9EE4748F1AA5A11B00075219 /* Dollar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,15 +76,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE474921AA5A1D100075219 /* Dollar.framework in Frameworks */,
+				9EE474911AA5A1CE00075219 /* Cent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E9329191AA4A28D00D46DFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EE4748C1AA5A11B00075219 /* Cent.framework */,
+				9EE4748D1AA5A11B00075219 /* Dollar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9ED9A5871AA49DCB00D59068 = {
 			isa = PBXGroup;
 			children = (
+				9E9329191AA4A28D00D46DFB /* Frameworks */,
 				9ED9A5921AA49DCB00D59068 /* Simple */,
 				9ED9A5AB1AA49DCB00D59068 /* SimpleTests */,
 				9ED9A5911AA49DCB00D59068 /* Products */,
@@ -81,6 +117,7 @@
 			children = (
 				9ED9A5951AA49DCB00D59068 /* AppDelegate.swift */,
 				9ED9A59A1AA49DCB00D59068 /* ViewController.swift */,
+				9ED9A5B81AA49F1A00D59068 /* Mock.swift */,
 				9ED9A59C1AA49DCB00D59068 /* Main.storyboard */,
 				9ED9A59F1AA49DCB00D59068 /* Images.xcassets */,
 				9ED9A5A11AA49DCB00D59068 /* LaunchScreen.xib */,
@@ -122,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ED9A5B21AA49DCB00D59068 /* Build configuration list for PBXNativeTarget "Simple" */;
 			buildPhases = (
-				9ED9A58C1AA49DCB00D59068 /* Sources */,
 				9ED9A58D1AA49DCB00D59068 /* Frameworks */,
 				9ED9A58E1AA49DCB00D59068 /* Resources */,
+				9ED9A58C1AA49DCB00D59068 /* Sources */,
+				9EE4748B1AA59C6F00075219 /* Embed Frameworks */,
+				9EE474901AA5A12500075219 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -210,6 +249,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9EE474901AA5A12500075219 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Cent.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9ED9A58C1AA49DCB00D59068 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -218,6 +275,7 @@
 				9ED9A59B1AA49DCB00D59068 /* ViewController.swift in Sources */,
 				9ED9A5961AA49DCB00D59068 /* AppDelegate.swift in Sources */,
 				9ED9A5991AA49DCB00D59068 /* Simple.xcdatamodeld in Sources */,
+				9ED9A5B91AA49F1A00D59068 /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ED9A5AF1AA49DCB00D59068 /* SimpleTests.swift in Sources */,
+				9ED9A5BA1AA49F9400D59068 /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +401,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Simple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +415,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Simple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +432,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -384,6 +452,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SimpleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -411,6 +480,7 @@
 				9ED9A5B41AA49DCB00D59068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9ED9A5B51AA49DCB00D59068 /* Build configuration list for PBXNativeTarget "SimpleTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +489,7 @@
 				9ED9A5B71AA49DCB00D59068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

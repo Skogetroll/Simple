@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var theLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let kurwa = Mock("Test")
+        theLabel.text = kurwa.say(45);
+        theLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
     }
 
     override func didReceiveMemoryWarning() {
